@@ -42,13 +42,14 @@ function game(){
         playerSelection = prompt();
         playerSelection = playerSelection.toUpperCase();
         computerSelection = computerPlay();
+        playRound(playerSelection, computerSelection)
         console.log(playerSelection);
         console.log(computerSelection);
         console.log(playerScore);
         console.log(computerScore);
-        playRound(playerSelection, computerSelection)
     }
-
+    console.log(gameWin());
+    gameReset();
 }
 
 function gameWin(){
@@ -65,18 +66,20 @@ function gameReset() {
     var reset = prompt('Do you Want to play again?')
     switch(reset) {
         case "yes":
+            scoreReset();
             game();
         case "no":
            alert("Hope you had fun!");              
     }
-    let playerScore = 0;
-    let computerScore = 0; 
-    
 }
 
+function scoreReset() {
+    playerScore = 0;
+    computerScore = 0;
+}
 
 console.log(game());
 console.log(playerScore);
 console.log(computerScore);
-console.log(gameWin());
-console.log(gameReset());
+
+

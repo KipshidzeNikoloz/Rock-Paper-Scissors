@@ -4,14 +4,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>A Basic HTML5 Template</title>
-
+  <link rel="stylesheet" href="style.css">
+  <title>Rock Paper Scissors</title>
 </head>
 
 <body>
-  <!-- your content here... -->
-  <script src="script.js"></script>
+
+  <header class='head'>
+    <h1>Rock Paper Scissors</h1>
+    <p>The fate of humanity rests in your hands</p>
+  </header>
+
+  <div class='scoreRow'>
+    <div class='scoreCard1'>
+      <div class='score'>You:</div>
+      <div class='score1'>0</div>
+    </div>
+     <div class='scoreCard2'> 
+      <div class='score'>The Machines:</div>
+      <div class='score2'>0</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class='choiceRow'>
+    <p class='choiceText'>These are your options, choose carefully</p>
+    <div class='choices'>
+      <div class='choiceCard'data-choice='rock' id = 'rock'>
+        <p class='choice' id = 'rock' data-choice='rock'>Rock</p>
+      </div>
+      <div class='choiceCard' data-choice='paper' id = 'paper'>
+        <p class='choice' id = 'paper' data-choice='paper'>Paper</p>
+      </div>
+      <div class='choiceCard' data-choice='scissors' id = 'scissors'>
+        <p class='choice' id = 'scissors' data-choice='scissors'>Scissors</p>
+      </div>
+    </div>
+  </div> 
+
+  <div class = 'endGameCard'>
+    <div class = 'endGameResult'></div>
+    <div class = 'replayPrompt'>Would you like to play again?</div>
+    <button class='restartBtn'>Restart</button>
+  </div>
+  <div class = 'overlay'></div>
+
+
+
+<script src="scripttest.js"></script>
 
   
 </body>

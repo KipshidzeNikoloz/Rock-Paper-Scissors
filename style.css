@@ -1,0 +1,120 @@
+body {
+    background-color: #2a2a2a;
+}
+
+.head {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: larger;
+    color: antiquewhite;
+}
+.scoreRow{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.scoreCard1{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 40px;
+    background-color: #1f1f1f;
+    flex-basis: 20%;
+    flex-direction: column;
+}
+.scoreCard2{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 40px;
+    background-color: #1f1f1f;
+    flex-basis: 20%;
+    flex-direction: column;
+}
+
+.scoreCardChoice {
+    color: antiquewhite;
+    background-color: #1f1f1f;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 40px;
+    font-size: 30px;
+    text-align: center;
+    flex-basis: 20%;
+    flex-direction: column;
+}
+
+.score {
+    color: antiquewhite;
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    flex: 2;
+    flex-basis: 10%;
+    font-size: 30px;
+
+}
+.score1 {
+    color: antiquewhite;
+    flex: 1;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.score2 {
+    color: antiquewhite;
+    flex: 1;
+    padding: 10px;
+    font-size: 30px;
+
+}
+
+.gameResult {
+    color: antiquewhite;
+    flex: 1;
+    padding: 5px;
+    font-size: 30px;
+}
+.choiceRow {
+    display: flex;
+    flex-direction: column;
+}
+
+.choiceText{
+    color: antiquewhite;
+    font-size: 20px;
+    font-weight: 300;
+    margin: auto;
+    padding: 20px;
+}
+.choices {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.choiceCard {
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 25px;
+    height: 200px;
+    padding: 30px;
+    background-color: darkgray;
+    flex-basis: 25%;
+    
+}
+
+.choice {
+    margin: auto;
+    font-size: 40px;
+}
+
+.endGameCard {
+    display: none;
+}

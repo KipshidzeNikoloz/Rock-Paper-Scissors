@@ -2,17 +2,113 @@ body {
     background-color: #2a2a2a;
 }
 
+@media all and (min-width:321px) and (max-width: 480px) {
+    body{
+        text-align: center;
+    }
+    .scoreCard1 {
+        margin: 5%;;
+    }
+    .scoreCard2 {
+        margin: 5%;
+    }
+    .scoreCardChoice {
+        margin: 5%;
+        padding: 20px;
+    }
+    .choiceCard {
+        margin: 5%;
+        padding: 10px;
+    }
+    .endGameCard.active {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 700px) {
+    .scoreRow{   
+        display: flex;
+        justify-content: space-evenly;
+        margin: 50px 0;
+    }     
+    .scoreCard1 {
+        padding: 5%;
+        width: 40%;
+        box-sizing: border-box;
+    }
+    .scoreCard2 {
+        padding: 5%;
+        width: 40%;
+        box-sizing: border-box;
+    }
+    .scoreCardChoice {
+        padding: 5%;
+        width: 30%;
+        margin: 0 5% 0 5%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .choiceCard {
+        height: 200px;
+        padding: 30px;
+    }
+    .choices {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    .endGameCard.active {
+        padding: 60px;
+    }
+}
+
+@media (min-width: 900px) {
+    .scoreRow{   
+        display: flex;
+        justify-content: space-evenly;
+        margin: 50px 0;
+    }     
+    .scoreCard1 {
+        padding: 40px;
+        flex-basis: 15%;
+        box-sizing: border-box;
+    }
+    .scoreCard2 {
+        padding: 40px;
+        flex-basis: 15%;
+        box-sizing: border-box;
+    }
+    .scoreCardChoice {
+        padding: 40px;
+        flex-basis: 25%;
+        box-sizing: border-box;
+    }
+    .choiceCard {
+        height: 200px;
+        padding: 30px;
+    }
+    .choices {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+    .endGameCard.active {
+        padding: 60px;
+    }
+    .gameResult {
+        margin: 20px;
+    }
+}
 .head {
     display:flex;
     align-items: center;
     flex-direction: column;
     font-size: larger;
     color: antiquewhite;
+    justify-content: center;
 }
 .scoreRow{
-    margin: 50px 0;
-    display: flex;
-    justify-content: space-evenly;
     user-select: none;
 }
 .scoreCard1{
@@ -20,19 +116,14 @@ body {
     align-items: center;
     box-sizing: border-box;
     border-radius: 25px;
-    padding: 40px;
     background-color: #1f1f1f;
-    flex-basis: 20%;
     flex-direction: column;
 }
 .scoreCard2{
     display: flex;
     align-items: center;
-    box-sizing: border-box;
     border-radius: 25px;
-    padding: 40px;
     background-color: #1f1f1f;
-    flex-basis: 20%;
     flex-direction: column;
 }
 
@@ -40,12 +131,9 @@ body {
     color: antiquewhite;
     background-color: #1f1f1f;
     display: flex;
-    box-sizing: border-box;
     border-radius: 25px;
-    padding: 40px;
     font-size: 30px;
     text-align: center;
-    flex-basis: 20%;
     flex-direction: column;
 }
 
@@ -85,6 +173,7 @@ body {
 .choiceRow {
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 
 .choiceText{
@@ -95,17 +184,13 @@ body {
     padding: 20px;
 }
 .choices {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
+
 }
 
 .choiceCard {
     display: flex;
     box-sizing: border-box;
     border-radius: 25px;
-    height: 200px;
-    padding: 30px;
     background-color: darkgray;
     flex-basis: 25%;
     transition: all 0.2s ease;
@@ -139,10 +224,10 @@ body {
     border-radius: 15px;
     background-color: rgb(31, 31, 31);
     font-size: 30px;
-    padding: 60px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    user-select: none;
 }
 
 .endGameResult {

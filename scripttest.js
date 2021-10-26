@@ -7,9 +7,11 @@ const paperBtn = document.getElementById('paper')
 const scissorsBtn = document.getElementById('scissors')
 const score1 = document.querySelector('.score1');
 const score2 = document.querySelector('.score2');
-
-//const choiceCard = document.querySelectorAll('.choiceCard');
-
+const endGameCard = document.querySelector('.endGameCard');
+const overlay = document.querySelector('.overlay');
+const endGameResult = document.querySelector('.endGameResult');
+const restartBtn = document.querySelector('.restartBtn')
+const stopBtn = document.querySelector('.stopBtn')
 //set starting points
 
 let playerScore = 0; 
@@ -47,11 +49,30 @@ function gameOver() {
 }
 
 function endScoreCard() {
-    
+    endGameCard.classList.add('active');
+    overlay.classList.add('active');
 }
 
-function gameReset() {
-   
+function closeEndScoreCard() {
+    endGameCard.classList.remove('active');
+    overlay.classList.remove('active');
+}
+
+function resetEvent() {
+    return playerScore > computerScore
+       ? (endGameResult.textContent = 'You Won! Thank you!')
+       : (endGameResult.textContent = 'You lost, but you tried your best')
+};
+
+function gameReset() { 
+    playerScore = 0; 
+    computerScore = 0;
+    gameResult.textContent = '';
+    computerChoice.textContent = 'Try Your Luck';
+    score1.textContent = '0';
+    score2.textContent = '0';
+    endGameCard.classList.remove('active');
+    overlay.classList.remove('active');
 }
 //Events 
 
@@ -59,11 +80,13 @@ function gameReset() {
 rockBtn.addEventListener('click', () => btnClick('ROCK'));
 paperBtn.addEventListener('click', () => btnClick('PAPER'));
 scissorsBtn.addEventListener('click', () => btnClick('SCISSORS'));
-
+restartBtn.addEventListener('click', gameReset);
+overlay.addEventListener('click', closeEndScoreCard);
+stopBtn.addEventListener('click', closeEndScoreCard);
 
 function btnClick(playerSelection) {
     if (gameOver()) {
-        gameReset()
+        endScoreCard()
         return;
     }
     
@@ -80,7 +103,8 @@ function btnClick(playerSelection) {
     updateChoice();
 
     if (gameOver()) {
-        gameReset()
+        endScoreCard();
+        resetEvent();
     }
 }
 
